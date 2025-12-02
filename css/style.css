@@ -1,0 +1,405 @@
+/* ============================
+   RESET GERAL
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ============================
+   VARIÁVEIS GLOBAIS
+============================= */
+:root {
+  --azul-principal: #0d47a1;
+  --laranja-destaque: #ff9800;
+  --branco: #ffffff;
+  --cinza-claro: #f5f5f5;
+}
+
+i.bi {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ============================
+   SEÇÃO PRINCIPAL
+============================= */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: white;                  /* deixa o ícone visível */
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 10; /* <<< impede que o slide cubra o botão */
+  outline: none !important;
+}
+
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 2rem;
+  height: 5px;
+  border: 1px solid white;
+  background: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+.meio {
+  padding: 4.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 4.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.meio p {
+  font-size: 20px;
+}
+
+.meio h3 {
+  font-size: 30px;
+  color: #ff9800;
+}
+
+.meio h2 {
+  font-size: 40px;
+  color: #f57c00;
+}
+
+.meio button {
+  background-color: var(--laranja-destaque);
+  border: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 15%;
+  color: var(--cinza-claro);
+}
+
+.meio button:hover {
+  transition: 0.3s;
+  background-color: #0d47a1;
+  color: white;
+}
+
+.meio img {
+  width: 500px;
+  height: 500px;
+}
+
+.img-meio {
+  width: 100%; /* ajuste o tamanho que quiser */
+  height: 100%; /* deve ser igual à largura */
+  border-radius: 50%; /* deixa redonda */
+  object-fit: cover; /* corta para caber no formato */
+}
+
+.meio-ios {
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 75px;
+  gap: 50px;
+  display: flex;
+  background: linear-gradient(300deg, #6500ad, #9500ff, #a528ff, #d293ff);
+  justify-content: center;
+  align-items: center;
+}
+
+.meio-ios button {
+  background: var(--laranja-destaque);
+  border: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 15%;
+  color: white;
+}
+
+.meio-ios button:hover {
+  transition: 0.3s;
+  background-color: var(--azul-principal);
+  color: white;
+}
+
+.meio-ios h2 {
+  font-size: 50px;
+  color: #6500ad;
+}
+
+.meio-ios h3 {
+  font-size: 40px;
+  color: white;
+}
+
+.meio-ios p {
+  font-size: 20px;
+  color: white;
+}
+
+.meio-ios img {
+  width: 800px;
+  height: 500px;
+}
+
+.img-quadradinho {
+  width: 100%; /* ajuste o tamanho que quiser */
+  height: 100%; /* deve ser igual à largura */
+  border-radius: 5%; /* deixa redonda */
+  object-fit: cover; /* corta para caber no formato */
+}
+
+.duvidas {
+  display: flex;
+  padding: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.duvidas h3 {
+  font-size: 40px;
+}
+
+.duvidas h2 {
+  font-size: 50px;
+  color: var(--laranja-destaque);
+}
+
+.duvidas button {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 25px;
+  border: none;
+  box-shadow: 0px 2px 4px black;
+}
+
+.duvidas button:hover {
+  background-color: var(--laranja-destaque);
+  color: white;
+}
+
+/* ============================
+    RESPONSIVIDADE GERAL
+============================ */
+
+/* Tablets e telas menores (<= 1024px) */
+@media (max-width: 1024px) {
+  .carousel {
+    height: 450px;
+  }
+
+  .meio img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .meio-ios img {
+    width: 550px;
+    height: 350px;
+  }
+
+  .meio,
+  .meio-ios {
+    padding: 40px;
+    gap: 40px;
+  }
+}
+
+/* Celulares padrão (<= 768px) */
+@media (max-width: 768px) {
+  .carousel {
+    height: 320px;
+  }
+
+  .meio {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .meio img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .meio h2 {
+    font-size: 30px;
+  }
+  .meio h3 {
+    font-size: 24px;
+  }
+  .meio p {
+    font-size: 16px;
+  }
+  .meio button {
+    width: 120px;
+    height: 45px;
+  }
+
+  .meio-ios {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 25px;
+  }
+
+  .meio-ios img {
+    width: 350px;
+    height: 250px;
+  }
+
+  .meio-ios h2 {
+    font-size: 36px;
+  }
+  .meio-ios h3 {
+    font-size: 26px;
+  }
+  .meio-ios p {
+    font-size: 16px;
+  }
+  .meio-ios button {
+    width: 120px;
+    height: 45px;
+  }
+
+  .duvidas {
+    padding: 40px;
+  }
+
+  .duvidas h2 {
+    font-size: 32px;
+  }
+  .duvidas h3 {
+    font-size: 26px;
+  }
+  .duvidas button {
+    width: 200px;
+    font-size: 18px;
+  }
+}
+
+/* Celulares pequenos (<= 480px) */
+@media (max-width: 480px) {
+  .carousel {
+    height: 240px;
+  }
+
+  .meio img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .meio-ios img {
+    width: 250px;
+    height: 180px;
+  }
+
+  .meio h2 {
+    font-size: 24px;
+  }
+  .meio h3 {
+    font-size: 18px;
+  }
+  .meio p {
+    font-size: 14px;
+  }
+
+  .meio-ios h2 {
+    font-size: 28px;
+  }
+  .meio-ios h3 {
+    font-size: 20px;
+  }
+  .meio-ios p {
+    font-size: 14px;
+  }
+
+  .duvidas {
+    padding: 25px;
+  }
+
+  .duvidas h2 {
+    font-size: 26px;
+  }
+  .duvidas h3 {
+    font-size: 20px;
+  }
+  .duvidas button {
+    width: 180px;
+    font-size: 16px;
+  }
+}

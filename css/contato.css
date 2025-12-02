@@ -1,0 +1,84 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+i.bi {
+  display: inline-flex;
+}
+
+/* CORES */
+:root {
+  --azul: #0d47a1;
+  --laranja: #ff9800;
+  --branco: #fff;
+  --cinza: #f5f5f5;
+}
+
+/* ====== SEÇÃO CONTATO ====== */
+.meio {
+  text-align: center;
+  padding: 5% 8%;
+}
+.meio h1 {
+  color: var(--laranja);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.meio h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* CARDS */
+.contatos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card-contato {
+  background: var(--laranja);
+  color: var(--branco);
+  width: auto;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 1rem;
+}
+.card-contato:hover {
+  transform: scale(1.08);
+}
+.card-contato i {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* MAPA */
+.mapa iframe {
+  width: 100%;
+  height: 350px;
+  margin-top: 3rem;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card-contato {
+    width: auto;
+    height: 100px;
+  }
+  .meio h1 {
+    font-size: 2rem;
+  }
+}
+

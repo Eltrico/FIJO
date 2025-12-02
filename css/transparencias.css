@@ -1,0 +1,159 @@
+/* ========================= RESET ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+i.bi {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+
+/* ========================= VARIÁVEIS ========================= */
+:root {
+  --azul-principal: #0d47a1;
+  --laranja-destaque: #ff9800;
+  --cinza-claro: #f5f5f5;
+  --branco: #ffffff;
+}
+
+/* ========================= MAIN ========================= */
+.transparencia-main {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.transparencia-main h1 {
+  font-size: 36px;
+  color: var(--azul-principal);
+  margin-bottom: 15px;
+}
+
+.transparencia-main p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* ========================= TABS ========================= */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  font-size: 1rem;
+  padding: 12px 25px;
+  background: var(--cinza-claro);
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  color: var(--azul-principal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: var(--azul-principal);
+  color: var(--branco);
+}
+
+.tab-button.active {
+  background: var(--laranja-destaque);
+  color: var(--branco);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ========================= CONTEÚDO DAS ABAS ========================= */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.card {
+  background: var(--cinza-claro);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.card h2 {
+  font-size: 26px;
+  color: var(--azul-principal);
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card a {
+  color: var(--azul-principal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: var(--laranja-destaque);
+  text-decoration: underline;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* ========================= ANIMAÇÃO CARDS ========================= */
+.tab-content.active .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================= ANIMAÇÃO FADE ========================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* ========================= RESPONSIVO ========================= */
+@media (max-width: 768px) {
+  .tab-button { padding: 10px 18px; font-size: 14px; }
+  .card h2 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .transparencia-main h1 { font-size: 28px; }
+  .card { padding: 20px; }
+  .card h2 { font-size: 20px; }
+}

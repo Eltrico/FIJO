@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonte poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!--CSS-->
+  <link rel="stylesheet" href="../css/projetos.css">
+  <link rel="stylesheet" href="../css/nav-bar.css">
+  <link rel="stylesheet" href="../css/footer-bar.css">
+  <!-- links bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Projetos - FIJO</title>
+</head>
+
+<body>
+    <header>
+    <nav>
+      <div class="sociais">
+        <div>
+          <a href="https://www.facebook.com/fundacaoirmaojoseotao/?locale=pt_BR">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/fundacaofijo/" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="selecao">
+        <a href="../index.html">
+          <img src="../img/logo-atualPrancheta 46.png">
+        </a>
+
+        <ul class="links">
+          <li class="dropdown">
+            <a href="../html/quem-somos.html"><i class="bi bi-people"></i> Quem Somos ▾</a>
+            <ul class="submenu">
+              <li><a href="../html/linha_tempo.html">História</a></li>
+              <li><a href="../html/diretoria.html">Diretoria</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="../html/projetos.html"><i class="bi bi-stack"></i> Projetos ▾</a>
+            <ul class="submenu">
+              <li><a href="../html/parceiros.html">Parceiros</a></li>
+              <li><a href="../html/impacto_social.html">Impacto Social</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../html/transparencia.html"><i class="bi bi-newspaper"></i> Transparência</a></li>
+
+          <li><a href="../html/carreiras-store.html"><i class="bi bi-cart"></i> Carreiras Store</a></li>
+        </ul>
+
+<!-- Botão Mobile -->
+<button class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Menu Mobile -->
+<div id="menu-mobile" class="menu-mobile">
+    <ul>
+
+        <!-- Quem Somos -->
+        <li class="mobile-dropdown">
+            <div class="mobile-header">
+                <a href="../html/quem-somos.html" class="mobile-link">
+                    <i class="bi bi-people-fill"></i> Quem Somos
+                </a>
+                <button class="mobile-arrow" data-target="submenu-1">▾</button>
+            </div>
+
+            <ul class="mobile-submenu" id="submenu-1">
+                <li><a href="../html/linha_tempo.html"><i class="bi bi-clock-history"></i> História</a></li>
+                <li><a href="../html/diretoria.html"><i class="bi bi-person-fill"></i> Diretoria</a></li>
+            </ul>
+        </li>
+
+        <!-- Projetos -->
+        <li class="mobile-dropdown">
+            <div class="mobile-header">
+                <a href="../html/projetos.html" class="mobile-link">
+                    <i class="bi bi-stack"></i> Projetos
+                </a>
+                <button class="mobile-arrow" data-target="submenu-2">▾</button>
+            </div>
+
+            <ul class="mobile-submenu" id="submenu-2">
+                <li><a href="../html/parceiros.html"><i class="bi bi-emoji-smile-fill"></i> Parceiros</a></li>
+                <li><a href="../html/impacto_social.html"><i class="bi bi-globe-americas"></i> Impacto Social</a></li>
+            </ul>
+        </li>
+
+        <!-- Links simples -->
+        <li><a href="../html/transparencia.html"><i class="bi bi-newspaper"></i> Transparência</a></li>
+        <li><a href="../html/carreiras-store.html"><i class="bi bi-cart-fill"></i> Carreiras Store</a></li>
+        <li><a href="../html/contato.html"><i class="bi bi-telephone-fill"></i> Contato</a></li>
+
+    </ul>
+</div>
+
+<!-- Fundo escuro -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ========================= NOVA SEÇÃO DE PROJETOS ========================= -->
+  <section class="fijo-projetos-section">
+    <h2>Alguns projetos e áreas de atuação da FIJO</h2>
+
+    <!-- Container de abas -->
+    <div class="tabs-container">
+      <button class="tab-button active" data-target="nos-de-impacto">Nós de Impacto</button>
+      <button class="tab-button" data-target="empregar-tche">Empregar Tchê</button>
+      <button class="tab-button" data-target="programa-potencialize">Programa Potencialize</button>
+    </div>
+
+    <!-- Conteúdo das abas -->
+    <div class="tab-content active" id="nos-de-impacto">
+      <div class="card-impacto">
+        <h2>Nós de Impacto</h2>
+     
+        <p>O Festival Nós de Impacto foi a primeira edição do evento voltado ao terceiro setor realizado na PUCRS pela Fundação Irmão José Otão. Seu objetivo principal foi aproximar estudantes, instituições sociais e comunidade, promovendo conexão, troca de experiências e engajamento em iniciativas de impacto social.</p>
+        <p>O evento contou com estandes, palestras e painéis com convidados que compartilharam trajetórias inspiradoras, além de networking e oportunidades de atuação no terceiro setor. Reuniu 217 participantes e recebeu 536 inscrições, demonstrando forte interesse da comunidade universitária.</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="empregar-tche">
+      <div class="card-impacto">
+        <h2>Empregar Tchê</h2>
+       
+        <p>O Empregar Tchê conecta jovens e adultos ao mercado de trabalho, oferecendo capacitação, workshops e orientação profissional. Atua em parceria com empresas locais e instituições de ensino, fortalecendo a empregabilidade e a formação profissional.</p>
+        <p>Os participantes recebem acompanhamento individual e oportunidades de estágio, ampliando suas chances de inserção no mercado e desenvolvimento de carreira.</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="programa-potencialize">
+      <div class="card-impacto">
+        <h2>Programa Potencialize</h2>
+        
+        <p>O Programa Potencialize desenvolve habilidades e competências de jovens e adultos para projetos de impacto social. Inclui mentorias, capacitações e acompanhamento de iniciativas inovadoras, incentivando soluções que gerem mudanças positivas na comunidade.</p>
+        <p>O programa fortalece o engajamento social, promove liderança e apoia a criação de iniciativas que contribuem para o desenvolvimento local e inclusão social.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= GRID DE PROJETOS ATUAIS ========================= -->
+  <div class="fijo-projetos-intro">
+    <p><strong>
+      A FIJO desenvolve ações que unem educação, pesquisa e parcerias estratégicas para promover inclusão,
+      qualificação e geração de oportunidades. Veja abaixo um resumo das principais frentes de trabalho.
+      </strong>
+    </p>
+  </div>
+
+  <div class="fijo-projetos-grid">
+    <div class="projeto-item">
+      <div class="projeto-icone">🎓</div>
+      <div class="projeto-texto">
+        <h3>Apoio à Educação</h3>
+        <p>Bolsas e incentivos para ampliar o acesso e a permanência na formação.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">📊</div>
+      <div class="projeto-texto">
+        <h3>Observatório do Terceiro Setor</h3>
+        <p>Estudos e dados para apoiar organizações e políticas sociais.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">💻</div>
+      <div class="projeto-texto">
+        <h3>Inclusão Digital</h3>
+        <p>Capacitação tecnológica e acesso a recursos digitais.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">💼</div>
+      <div class="projeto-texto">
+        <h3>Empregabilidade</h3>
+        <p>Parcerias para formação profissional, estágios e conexão com o mercado.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">🚀</div>
+      <div class="projeto-texto">
+        <h3>Inovação Social</h3>
+        <p>Apoio a iniciativas e negócios que geram impacto social positivo.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">📋</div>
+      <div class="projeto-texto">
+        <h3>Pesquisa e Políticas Públicas</h3>
+        <p>Produção de evidências para orientar decisões e políticas locais.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">🤝</div>
+      <div class="projeto-texto">
+        <h3>Projetos Comunitários</h3>
+        <p>Atividades culturais e de engajamento que fortalecem comunidades.</p>
+      </div>
+    </div>
+    <div class="projeto-item">
+      <div class="projeto-icone">📈</div>
+      <div class="projeto-texto">
+        <h3>Monitoramento de Impacto</h3>
+        <p>Medição e aprimoramento de resultados para maximizar efeitos sociais.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../img/logo-branca.png" alt="logo fijo" />
+        <div class="footer-social">
+          <a href="https://www.facebook.com/fundacaoirmaojoseotao/?locale=pt_BR" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/fundacaofijo/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-formacao">
+        <h3>Informações Institucionais</h3>
+        <a href="https://maps.app.goo.gl/2BzVPABnQnim523c7">
+          <p>Ipiranga, 6681 - Prédio 2 - Campus PUCRS</p>
+          <p>CEP 90619-900 - Porto Alegre/RS</p>
+        </a>
+        <p>CNPJ: 88.483.276/0001-19</p>
+      </div>
+
+      <div class="footer-contato">
+        <h3>Contatos</h3>
+        <p><a href="../html/contato.html">Fale conosco</a></p>
+        <p>Email: <a href="mailto:fundacao@pucrs.br">fundacao@pucrs.br</a></p>
+        <p>Telefone: <a href="tel:+555133534130">(51) 3353-4130</a></p>
+      </div>
+    </div>
+
+    <div class="footer-botao">
+      <p>&copy; 2025 Fundação Irmão José Otão - FIJO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ========================= SCRIPT DE ABAS ========================= -->
+  <script>
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active das abas e conteúdos
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        // Adiciona active à aba clicada e seu conteúdo correspondente
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+  <script src="../js/index.js"></script>
+</body>
+</html>
