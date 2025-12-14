@@ -1,0 +1,113 @@
+/* ============================
+   VARIÁVEIS GLOBAIS
+============================= */
+:root {
+  --laranja-texto: #fdaf1e;
+  --azul-principal: #0d47a1;
+  --laranja-destaque: #ff9800;
+  --branco: #ffffff;
+  --cinza-claro: #f5f5f5;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  color: white;
+  padding: 40px 0 0px;
+}
+
+.footer-social {
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-social .bi {
+  color: white;
+  font-size: 40px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .bi:hover {
+    color: var(--laranja-destaque);
+    transition: 0.3s;
+  }
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 10%;
+}
+
+.footer-logo img {
+  width: 250px;
+  height: auto;
+}
+
+.footer-formacao h3,
+.footer-contato h3 {
+  color: var(--laranja-texto);
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.footer-formacao p,
+.footer-contato p {
+  margin: 5px 0;
+}
+
+.footer-formacao a{
+text-decoration: none;
+color: white;
+}
+
+.footer-formacao a:hover{
+color: var(--laranja-destaque);
+transition: 0,3s;
+}
+
+.footer-contato a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contato a:hover {
+  color: var(--laranja-destaque);
+}
+
+.footer-botao {
+  border-top: 1px solid var(--laranja-texto);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  padding-top: 10px;
+  font-size: 0.9em;
+  background-color: var(--azul-principal);
+}
+
+@media (max-width: 768px) {
+  
+  .footer-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
+} 
+
+.duvidas h2 {
+  color: var(--laranja-texto);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
