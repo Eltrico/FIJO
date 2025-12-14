@@ -90,3 +90,23 @@ transition: 0,3s;
   font-size: 0.9em;
   background-color: var(--azul-principal);
 }
+
+@media (max-width: 768px) {
+  
+  .footer-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
+} 
+
+.duvidas h2 {
+  color: var(--laranja-texto);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
