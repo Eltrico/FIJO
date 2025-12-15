@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/e1d3c5_5cea48401b884e03b0d7eaca76acc833%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e1d3c5_5cea48401b884e03b0d7eaca76acc833%7Emv2.png" type="image/png">
+
+    <!-- fonte poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- links bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- endereços css -->
+    <link rel="stylesheet" href="./css/nav-bar.css" />
+    <link rel="stylesheet" href="./css/footer-bar.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>FIJO</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="sociais">
+                <div>
+                    <a href="https://www.facebook.com/fundacaoirmaojoseotao/?locale=pt_BR">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/fundacaofijo/" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="selecao">
+                <a href="./index.html">
+                    <img src="./img/logo-atualPrancheta 46.png">
+                </a>
+
+                <ul class="links">
+                    <li class="dropdown">
+                        <a href="./html/quem-somos.html"><i class="bi bi-people"></i> Quem Somos ▾</a>
+                        <ul class="submenu">
+                            <li><a href="./html/linha_tempo.html">História</a></li>
+                            <li><a href="./html/diretoria.html">Diretoria</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./html/projetos.html"><i class="bi bi-stack"></i> Projetos ▾</a>
+                        <ul class="submenu">
+                            <li><a href="./html/parceiros.html">Parceiros</a></li>
+                            <li><a href="./html/impacto_social.html">Impacto Social</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./html/transparencia.html"><i class="bi bi-newspaper"></i> Transparência</a></li>
+
+                    <li><a href="./html/carreiras-store.html"><i class="bi bi-cart"></i> Carreiras Store</a></li>
+                </ul>
+
+                <!-- Botão Mobile -->
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Menu Mobile -->
+                <div id="menu-mobile" class="menu-mobile">
+                    <ul>
+
+                        <!-- Quem Somos -->
+                        <li class="mobile-dropdown">
+                            <div class="mobile-header">
+                                <a href="./html/quem-somos.html" class="mobile-link">
+                                    <i class="bi bi-people-fill"></i> Quem Somos
+                                </a>
+                                <button class="mobile-arrow" data-target="submenu-1">▾</button>
+                            </div>
+
+                            <ul class="mobile-submenu" id="submenu-1">
+                                <li><a href="./html/linha_tempo.html"><i class="bi bi-clock-history"></i> História</a>
+                                </li>
+                                <li><a href="./html/diretoria.html"><i class="bi bi-person-fill"></i> Diretoria</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Projetos -->
+                        <li class="mobile-dropdown">
+                            <div class="mobile-header">
+                                <a href="./html/projetos.html" class="mobile-link">
+                                    <i class="bi bi-stack"></i> Projetos
+                                </a>
+                                <button class="mobile-arrow" data-target="submenu-2">▾</button>
+                            </div>
+
+                            <ul class="mobile-submenu" id="submenu-2">
+                                <li><a href="./html/parceiros.html"><i class="bi bi-emoji-smile-fill"></i> Parceiros</a>
+                                </li>
+                                <li><a href="./html/impacto_social.html"><i class="bi bi-globe-americas"></i> Impacto
+                                        Social</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Links simples -->
+                        <li><a href="./html/transparencia.html"><i class="bi bi-newspaper"></i> Transparência</a></li>
+                        <li><a href="./html/carreiras-store.html"><i class="bi bi-cart-fill"></i> Carreiras Store</a>
+                        </li>
+                        <li><a href="./html/contato.html"><i class="bi bi-telephone-fill"></i> Contato</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Fundo escuro -->
+                <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="carousel">
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="./img/NÓS-DE-IMPACTO.png">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Empregar-TCHÊ.png">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/potencialize.png">
+                    </div>
+                </div>
+
+                <button class="prev"><a class="bi bi-chevron-compact-left"></a></button>
+                <button class="next"><a class="bi bi-chevron-compact-right"></a></button>
+
+                <div class="indicators">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="meio">
+            <div class="margin-esquerda">
+                <img src="./img/frente-fundacao.jpeg" class="img-meio">
+            </div>
+
+            <div class="margin-direita">
+                <h3><strong>SOBRE NÓS</strong></h3>
+                <h2><strong>FUNDAÇÃO IRMÃO JOSÉ OTÃO<br> AJUDA JOVENS DESDE 1981</strong></h2>
+                <p>
+                    Na Fijo, transformamos ideias em impacto social.<br>
+                    Desenvolvemos projetos que fortalecem educação, cultura e capacitação.<br>
+                    Promovemos oportunidades para comunidades e indivíduos,<br> gerando impacto real. Cada ação reflete
+                    nosso
+                    compromisso<br> com a transformação social e o acesso à informação.
+                </p>
+                <a href="./html/quem-somos.html">
+                    <button>Saiba Mais</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="meio-ios">
+            <div class="margin-esquerda">
+                <h3><strong>Impacto Social</strong> </h3>
+                <h2>IOS</h2>
+                <p>
+                    O Instituto da Oportunidade Social (IOS) é uma organização sem fins lucrativos que oferece cursos
+                    gratuitos
+                    para jovens e pessoas com deficiência.
+                    O foco é preparar para o mercado de trabalho, com cursos em tecnologia e administração.
+                    O IOS também desenvolve habilidades socioemocionais e cria oportunidades por meio de parcerias com
+                    empresas.
+                </p>
+                <a href="./html/impacto_social.html">
+                    <button>Mais Sobre</button>
+                </a>
+            </div>
+
+            <div class="margin-direita">
+                <img src="./img/frente fij.jpeg" class="img-quadradinho">
+            </div>
+        </section>
+
+        <article class="duvidas">
+            <div>
+                <h3>Alguma dúvida?</h3>
+            </div>
+            <div>
+                <h2>Entre em contato conosco</h2>
+            </div>
+            <div>
+                <a href="./html/contato.html">
+                    <button>Contatos</button>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+  <div class="footer-content">
+    
+    <div class="footer-brand">
+      <img src="./img/logo-branca.png" alt="Logo FIJO" class="footer-logo-img" />
+      <div class="footer-social">
+        <a href="https://www.facebook.com/fundacaoirmaojoseotao/?locale=pt_BR" target="_blank" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/fundacaofijo/" target="_blank" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Institucional</h3>
+      <ul class="footer-links">
+        <li>
+          <a href="https://maps.app.goo.gl/2BzVPABnQnim523c7" target="_blank">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>
+              Ipiranga, 6681 - Prédio 2<br>
+              Campus PUCRS<br>
+              Porto Alegre/RS - 90619-900
+            </span>
+          </a>
+        </li>
+        <li class="cnpj-text">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>CNPJ: 88.483.276/0001-19</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contatos</h3>
+      <ul class="footer-links">
+        <li>
+          <a href="./html/contato.html">
+            <i class="bi bi-chat-dots-fill"></i> Fale conosco
+          </a>
+        </li>
+        <li>
+          <a href="mailto:fundacao@pucrs.br">
+            <i class="bi bi-envelope-fill"></i> fundacao@pucrs.br
+          </a>
+        </li>
+        <li>
+          <a href="tel:+555133534130">
+            <i class="bi bi-telephone-fill"></i> (51) 3353-4130
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fundação Irmão José Otão - FIJO. Todos os direitos reservados.</p>
+  </div>
+</footer>
+    <script src="./js/carrousel-carreiraStore.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

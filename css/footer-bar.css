@@ -1,0 +1,182 @@
+footer {
+  background: linear-gradient(135deg, var(--azul-principal), #1565c0);
+  color: var(--branco);
+  font-family: sans-serif; 
+}
+
+/* Container Principal */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Coluna da Marca (Logo) */
+.footer-brand {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo-img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Redes Sociais */
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social .bi {
+  color: var(--branco);
+  font-size: 20px;
+}
+
+.footer-social a:hover {
+  background-color: var(--laranja-destaque);
+  transform: translateY(-3px); 
+}
+
+/* Seções de Texto (Institucional e Contato) */
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  color: var(--laranja-texto);
+  font-size: 1.2rem; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Detalhe visual (tracinho) abaixo do título */
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--laranja-destaque);
+}
+
+/* Listas de Links e Texto */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-links a, 
+.footer-links .cnpj-text {
+  color: rgba(255, 255, 255, 0.85); 
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-links i {
+  color: var(--laranja-texto); 
+  margin-top: 3px; 
+}
+
+.footer-links a:hover {
+  color: var(--laranja-destaque);
+}
+
+/* Barra de Copyright */
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; 
+    text-align: center;
+    padding: 30px 20px; 
+    gap: 30px; 
+  }
+  
+  .footer-brand,
+  .footer-section {
+    flex: 0 1 auto; 
+    width: 100%;  
+  }
+
+  .footer-brand {
+    align-items: center; 
+    margin-bottom: 10px; 
+  }
+  
+  .footer-logo-img {
+      width: 150px; 
+      margin-bottom: 15px;
+  }
+
+ .footer-social {
+    display: flex;     
+    width: 100%;       
+    justify-content: center; 
+    margin-top: 10px;    
+    gap: 15px;           
+  }
+
+  .footer-section h3 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+  }
+
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-links li,
+  .footer-links a {
+    justify-content: center; 
+  }
+  
+ 
+  .footer-links i {
+      margin-top: 0;
+  }
+}

@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+body{
+  width: 100%;
+  max-width: 100%;
+}
+
+i.bi {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Linha do tempo */
+:root {
+  --fijo-primary: #007bff;
+  --fijo-secondary: #ff7f00;
+  --fijo-dark: #333;
+  --bg: #f4f6f9;
+  --text-light: #fff;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 3em;
+  margin-top: 40px;
+  background-image: linear-gradient(
+    to right,
+    var(--fijo-primary),
+    var(--fijo-secondary)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+  overflow: visible;
+  height: 100%;
+}
+
+svg path {
+  fill: none;
+  stroke: var(--fijo-primary);
+  stroke-width: 7;
+  animation: wave-move 5s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.item {
+  position: relative;
+  width: 140px;
+  text-align: center;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item:nth-child(1) {
+  padding-top: 50px;
+}
+
+.item:nth-child(2) {
+  padding-bottom: 50px;
+}
+
+.item:nth-child(3) {
+  padding-top: 80px;
+}
+
+.item:nth-child(4) {
+  padding-bottom: 80px;
+}
+
+.years {
+  
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--fijo-dark);
+  padding: 2px 8px;
+  border-radius: 4px;
+  z-index: 6;
+}
+
+.circle {
+  
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 6px solid var(--fijo-primary);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  background: linear-gradient(300deg, #ff5a00, #ff7a1f, #ffa351, #ffd9a3);
+}
+
+.circle:hover {
+  transform: scale(1.3) translateZ(50px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.img::after {
+  content: attr(data-year);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translateZ(1px);
+  z-index: -1;
+}
+
+.circle:hover::after {
+  opacity: 1;
+}
+
+
+
+/* Linha do tempo do CARROSSEL */
+/* CONTAINER PRINCIPAL */
+.timeline-section {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.timeline-container {
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* já estava, mas reafirmamos */
+  padding-bottom: 140px; /* reserva espaço embaixo para a linha + bolinha */
+  min-height: 500px; /* mantém seu valor atual */
+}
+
+/* CARROSSEL */
+.timeline-carousel {
+  width: 100%;
+  height: auto;
+  background: #f57c00;
+  border-radius: 12px;
+  overflow: visible;
+  z-index: 1;
+  min-height: 550px; /* ajuste para o tamanho desejado */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* SLIDES COM MOVIMENTO SUAVE */
+.slide {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.6s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0px);
+  position: relative;
+}
+
+/* TEXTO */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  width: 100%;
+  font-size: 20px;
+  padding: 70px;
+  text-align: justify;
+}
+
+.timeline-section h3 {
+  text-align: center;
+}
+
+/* LINHA DO TEMPO */
+.line-area {
+  margin-top: 40px;
+  position: fixed;
+  height: 80px;
+}
+
+.year {
+  position: fixed;
+  top: 460px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background: white;
+  position: fixed;
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #1976d2;
+  border-radius: 50%;
+  position: fixed;
+  top: 432px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+/* ---------- SETAS SOBREPOSTAS (CORRIGIDO) ---------- */
+.arrow {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  font-size: 26px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: #4897ff;
+}
+
+/* posição lateral + centralização vertical */
+.prev {
+  left: 0px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.mobile-year-box {
+  display: none;
+}
+
+/* ================================
+   AJUSTE FINAL DAS SETAS NO MOBILE
+   ================================ */
+/* ================================
+   RESPONSIVO 
+================================ */
+@media (max-width: 1000px) {
+  .timeline {
+    width: 95%;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3em;
+  }
+  .timeline {
+    flex-direction: column;
+    gap: 40px;
+  }
+  svg {
+    display: none;
+  }
+  .item {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 780px) {
+  /* Ocultar linha, ponto e ano */
+  .line,
+  .dot,
+  .year { 
+    display: none !important;
+  }
+
+  /* Quadrado laranja 100% */
+  .timeline-container {
+    width: 100% !important;
+    margin: 0;
+    padding-bottom: 80px; /* espaço para as setas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-carousel {
+    width: 75% !important;
+    border-radius: 0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  /* Texto menor e menos apertado */
+  .text {
+    padding: 20px !important;
+    font-size: 18px;
+  }
+
+  /* === POSICIONAMENTO PERFEITO DAS SETAS === */
+  .prev,
+  .next {
+    position: relative !important;
+    top: 20px !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+
+  /* As duas setas lado a lado e centralizadas */
+  .arrows-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* distância entre as setas */
+    margin-top: 55px;
+    position: relative;
+    margin-top: 55px; /* cria espaço para o ano */
+  }
+
+  .mobile-year-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .mobile-year-box {
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--fijo-primary);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 8px 22px;
+    border-radius: 8px;
+
+    z-index: 30;
+  }
+} 

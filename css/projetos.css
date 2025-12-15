@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+i.bi {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Projetos FIJO - resumo visual centralizado ---------- */
+.fijo-projetos-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+.fijo-projetos-intro h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #003366;
+  text-align: center;
+  font-weight: 600;
+}
+
+.fijo-projetos-intro p{
+  text-align: center;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+/* ---------- Grid de projetos centralizado ---------- */
+.fijo-projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* colunas flexíveis */
+  gap: 20px 40px; /* espaçamento entre linhas e colunas */
+  justify-content: center; /* centraliza horizontalmente */
+  margin: 0 auto; /* centraliza o grid no container */
+  padding: 0 20px; /* padding lateral */
+}
+
+/* Item */
+.projeto-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: flex-start; /* mantém ícone e texto alinhados à esquerda */
+}
+
+.projeto-item:hover .projeto-icone {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Ícone dentro de círculo */
+.projeto-icone {
+  min-width: 64px;
+  min-height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: #f2f8ff;
+  color: #003366;
+  border: 3px solid #00a6c1;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Alternar cores para contraste (opcional) */
+.fijo-projetos-grid .projeto-item:nth-child(2n) .projeto-icone {
+  background: #fff3f0;
+  border-color: #ff7f32;
+  color: #b84a18;
+}
+
+.fijo-projetos-grid .projeto-item:nth-child(3n) .projeto-icone {
+  background: #f3fff9;
+  border-color: #00c4a6;
+  color: #0f7f60;
+}
+
+/* Texto */
+.projeto-texto h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #05263a;
+  font-weight: 600;
+}
+
+.projeto-texto p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .fijo-projetos-grid {
+    grid-template-columns: 1fr; /* 1 coluna em telas menores */
+    justify-content: center; /* centraliza a coluna única */
+  }
+  .projeto-icone {
+    min-width: 56px;
+    min-height: 56px;
+    font-size: 24px;
+  }
+}
+
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  padding: 12px 25px;
+  background: var(--cinza-claro);
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  color: var(--azul-principal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: var(--azul-principal);
+  color: var(--branco);
+}
+
+.tab-button.active {
+  background: var(--laranja-destaque);
+  color: var(--branco);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* ========================= CONTEÚDO DAS ABAS ========================= */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.card {
+  background: var(--cinza-claro);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.card h2 {
+  font-size: 26px;
+  color: var(--azul-principal);
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card a {
+  color: var(--azul-principal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: var(--laranja-destaque);
+  text-decoration: underline;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* ========================= ANIMAÇÃO CARDS ========================= */
+.tab-content.active .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================= ANIMAÇÃO FADE ========================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.card-impacto {
+    background: orange;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.card-impacto img {
+width: 300px;
+height: 300px;
+}
+
+
+
+
+
+
+/* ---------- Variáveis de cor ---------- */
+:root {
+  --azul-principal: #003366;
+  --laranja-destaque: #ff7f32;
+  --cinza-claro: #f2f2f2;
+  --branco: #ffffff;
+}
+
+/* ---------- Projetos FIJO - resumo visual ---------- */
+.fijo-projetos-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+.fijo-projetos-section h2 {
+  font-size: 28px;
+  text-align: center;
+  color: var(--azul-principal);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.fijo-projetos-intro {
+  max-width: 900px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+}
+
+.fijo-projetos-intro p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Grid de Projetos */
+.fijo-projetos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-bottom: 60px;
+}
+
+.projeto-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.projeto-icone {
+  min-width: 64px;
+  min-height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: #f2f8ff;
+  color: var(--azul-principal);
+  border: 3px solid #00a6c1;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.projeto-texto h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #05263a;
+  font-weight: 600;
+}
+
+.projeto-texto p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* Alternar cores dos ícones */
+.fijo-projetos-grid .projeto-item:nth-child(2n) .projeto-icone {
+  background: #fff3f0;
+  border-color: #ff7f32;
+  color: #b84a18;
+}
+
+.fijo-projetos-grid .projeto-item:nth-child(3n) .projeto-icone {
+  background: #f3fff9;
+  border-color: #00c4a6;
+  color: #0f7f60;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .fijo-projetos-grid {
+    grid-template-columns: 1fr;
+  }
+  .fijo-projetos-section {
+    padding: 0 20px;
+  }
+  .projeto-icone {
+    min-width: 56px;
+    min-height: 56px;
+    font-size: 24px;
+  }
+}
+
+/* ---------- Abas ---------- */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  padding: 12px 25px;
+  background: var(--cinza-claro);
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  color: var(--azul-principal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: var(--azul-principal);
+  color: var(--branco);
+}
+
+.tab-button.active {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Cores específicas para cada aba ativa */
+.tab-button.active[data-target="nos-de-impacto"] {
+  background: linear-gradient(90deg, #ff7f32, #7f3fff); /* Laranja → Roxo */
+  color: #fff;
+}
+
+.tab-button.active[data-target="empregar-tche"] {
+  background: linear-gradient(90deg, #003366, #66b2ff); /* Azul escuro → Azul claro */
+  color: #fff;
+}
+
+.tab-button.active[data-target="programa-potencialize"] {
+  background: linear-gradient(90deg, #003366, #1a73e8, #1a73e8, #66b2ff, #ffffff); /* Azul → Branco */
+  color: #fff;
+}
+
+/* Conteúdo das abas */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Cards das abas */
+.card-impacto {
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+  color: #fff;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.card-impacto h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Gradientes para cada card */
+#nos-de-impacto .card-impacto {
+  background: linear-gradient(135deg, #ff7f32, #7f3fff);
+}
+
+#empregar-tche .card-impacto {
+  background: linear-gradient(135deg, #003366, #66b2ff);
+}
+
+#programa-potencialize .card-impacto {
+  background: linear-gradient(135deg, #1a73e8, #ffffff);
+  color: #003366; /* texto escuro para contraste no degradê claro */
+}
+
+.card-impacto img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.card-impacto p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Animação dos cards */
+.tab-content.active .card-impacto {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+

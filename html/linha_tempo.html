@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://static.wixstatic.com/media/e1d3c5_5cea48401b884e03b0d7eaca76acc833%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e1d3c5_5cea48401b884e03b0d7eaca76acc833%7Emv2.png" type="image/png">
+  <!-- fonte poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <title>História - FIJO</title>
+  <link rel="stylesheet" href="../css/nav-bar.css" />
+  <link rel="stylesheet" href="../css/linha_tempo.css" />
+  <link rel="stylesheet" href="../css/footer-bar.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="sociais">
+        <div>
+          <a href="https://www.facebook.com/fundacaoirmaojoseotao/?locale=pt_BR">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/fundacaofijo/" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="selecao">
+        <a href="../index.html">
+          <img src="../img/logo-atualPrancheta 46.png">
+        </a>
+
+        <ul class="links">
+          <li class="dropdown">
+            <a href="../html/quem-somos.html"><i class="bi bi-people"></i> Quem Somos ▾</a>
+            <ul class="submenu">
+              <li><a href="../html/linha_tempo.html">História</a></li>
+              <li><a href="../html/diretoria.html">Diretoria</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="../html/projetos.html"><i class="bi bi-stack"></i> Projetos ▾</a>
+            <ul class="submenu">
+              <li><a href="../html/parceiros.html">Parceiros</a></li>
+              <li><a href="../html/impacto_social.html">Impacto Social</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../html/transparencia.html"><i class="bi bi-newspaper"></i> Transparência</a></li>
+
+          <li><a href="../html/carreiras-store.html"><i class="bi bi-cart"></i> Carreiras Store</a></li>
+        </ul>
+
+        <!-- Botão Mobile -->
+        <button class="menu-btn" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Menu Mobile -->
+        <div id="menu-mobile" class="menu-mobile">
+          <ul>
+
+            <!-- Quem Somos -->
+            <li class="mobile-dropdown">
+              <div class="mobile-header">
+                <a href="../html/quem-somos.html" class="mobile-link">
+                  <i class="bi bi-people-fill"></i> Quem Somos
+                </a>
+                <button class="mobile-arrow" data-target="submenu-1">▾</button>
+              </div>
+
+              <ul class="mobile-submenu" id="submenu-1">
+                <li><a href="../html/linha_tempo.html"><i class="bi bi-clock-history"></i> História</a></li>
+                <li><a href="../html/diretoria.html"><i class="bi bi-person-fill"></i> Diretoria</a></li>
+              </ul>
+            </li>
+
+            <!-- Projetos -->
+            <li class="mobile-dropdown">
+              <div class="mobile-header">
+                <a href="../html/projetos.html" class="mobile-link">
+                  <i class="bi bi-stack"></i> Projetos
+                </a>
+                <button class="mobile-arrow" data-target="submenu-2">▾</button>
+              </div>
+
+              <ul class="mobile-submenu" id="submenu-2">
+                <li><a href="../html/parceiros.html"><i class="bi bi-emoji-smile-fill"></i> Parceiros</a></li>
+                <li><a href="../html/impacto_social.html"><i class="bi bi-globe-americas"></i> Impacto Social</a></li>
+              </ul>
+            </li>
+
+            <!-- Links simples -->
+            <li><a href="../html/transparencia.html"><i class="bi bi-newspaper"></i> Transparência</a></li>
+            <li><a href="../html/carreiras-store.html"><i class="bi bi-cart-fill"></i> Carreiras Store</a></li>
+            <li><a href="../html/contato.html"><i class="bi bi-telephone-fill"></i> Contato</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Fundo escuro -->
+        <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <br /><br /><br />
+
+  <h1>HISTÓRIA DA FIJO</h1>
+
+  <div class="timeline-container">
+    <div class="timeline">
+      <svg viewBox="0 0 900 200">
+        <path d="M0 100 C100 0, 200 200, 300 100 S500 0, 600 100 S800 200, 900 100"></path>
+      </svg>
+
+      <div class="item">
+        <div class="years">1981</div>
+        <div class="circle" data-year="1981" onclick="openYear(1981, this)">
+          <img src="../img/grupo fijo.jpeg" alt="historia" class="img">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="years">2000</div>
+        <div class="circle" data-year="2000" onclick="openYear(2000, this)">
+          <img src="../img/estacionamento fijo.jpeg" alt="historia" class="img">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="years">2010</div>
+        <div class="circle" data-year="2010" onclick="openYear(2010, this)">
+          <img src="../img/turma fijo.jpeg" alt="historia" class="img">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="years">2020</div>
+        <div class="circle" data-year="2020" onclick="openYear(2020, this)">
+          <img src="../img/turma fijo2.jpeg" alt="historia" class="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARROSSEL -->
+  <section class="timeline-section">
+    <div class="timeline-container">
+
+      <div class="timeline-carousel">
+        <!-- SLIDE 1 -->
+        <div class="slide active">
+          <div class="content">
+            <div class="text">
+              <h3>DATA DE FUNDAÇÃO</h3>
+              <br />
+              <p>
+                Entidade sem fins lucrativos, instituída em 29 de outubro de
+                1981. <br />
+                <br />
+                A Fijo tem sua atuação voltada para o desenvolvimento de
+                projetos e serviços nas áreas educacional e social por meio do
+                conhecimento, conectando pessoas e organizações, para a
+                construção de uma sociedade mais justa e solidária. além de
+                apoiar a Pontifícia Universidade Católica do Rio Grande do Sul
+                (PUCRS) nas ações que visam oportunizar o crescimento
+                profissional dos seus alunos e diplomados.
+              </p>
+            </div>
+          </div>
+          <div class="line-area">
+            <div class="year">1981</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>
+                PROGRAMA DE BOLSAS ROTATIVAS PARA ESTUDANTES CARENTES DA PUCRS
+              </h3>
+              <br />
+              <p>
+                A atividade primordial da Fijo foi a sua estruturação e
+                organização, desenvolvendo as atividades, basicamente, no
+                PROGRAMA DE BOLSAS ROTATIVAS PARA ESTUDANTES CARENTES DA PUCRS,
+                envolvendo múltiplos contratos e ações junto às empresas e
+                pessoas para a obtenção de fundos do programa. A Fijo realizava
+                a administração de bolsas de estudo do Programa de Crédito
+                Educativo do Estado (PROCRED) que oferecia apoio ao estudante
+                carente para manutenção dos estudos em universidades
+                particulares. Além disso, nesse período, a Fijo apoiou a obra
+                social Vila Fátima, auxiliou alunos de orfanatos de Porto Alegre
+                para a formação de uma orquestra infanto-juvenil e realizou
+                intercâmbio com outras Fundações.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1981 – 1990</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>
+                PROGRAMA DE BOLSAS ROTATIVAS PARA ESTUDANTES CARENTES DA PUCRS
+              </h3>
+              <br />
+              <p>
+                A Fijo continuou com as atividades focadas no PROGRAMA DE BOLSAS
+                ROTATIVAS PARA ESTUDANTES CARENTES DA PUCRS, continuando a ação
+                dos anos anteriores. Ao completar 10 anos, o Programa havia
+                conseguido 1.784 bolsas de estudo. Também, neste período
+                iniciaram-se as tratativas para a promoção dos cursos
+                profissionalizantes.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1990 – 1992</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA DE CURSOS PROFISSIONALIZANTES</h3>
+              <br />
+              <p>
+                A partir desse ano a Fijo ampliou seu leque de atividades,
+                criando o Centro de Preparação de Recursos Humanos com objetivo
+                de preparar pessoas de baixa renda para ingressarem no mercado
+                de trabalho, através de cursos profissionalizantes para o
+                exercício de mão de obra em atividades de diversos setores.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1993</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA DE APOIO ÀS PORTADORAS DE CÂNCER DE MAMA</h3>
+              <br>
+              <p>
+                Criação da Associação das Voluntárias do Câncer de Mama,
+                integrada ao HSL, para atender mulheres com diagnóstico de
+                câncer de mama, promover atividades preventivas e oferecer apoio
+                a seus familiares. Contou com o trabalho de 30 senhoras para
+                executar o Projeto “Educar para a prevenção do Câncer de mama”
+                junto à mulheres de baixa renda.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1994</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA DE ESTÁGIOS PARA ESTUDANTES DA PUCRS</h3>
+              <br />
+              <p>
+                Criado com o objetivo de promover a interação entre
+                Pró-reitorias, diretores, professores e alunos da PUCRS,
+                tornando o processo de estágio numa fonte alimentadora e
+                renovadora dos programas dos cursos, e ser um agente de
+                integração para que acadêmicos da PUCRS possam desenvolver
+                estágio remunerado em empresas mediante convênio e termo de
+                compromisso firmado entre a Fijo, a empresa, a PUCRS e o
+                estagiário.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1995</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 7 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>
+                PROGRAMA DE INTEGRAÇÃO E DESENVOLVIMENTO DO MOVIMENTO
+                ASSOCIATIVO DE FUNDAÇÕES
+              </h3>
+              <br />
+              <p>
+                Criação do Centro de Estudos e Pesquisas sobre Fundações e
+                publicação da primeira Revista Fundações.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1995</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 8 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA DE EDUCAÇÃO PARA O TRÂNSITO</h3>
+              <br />
+              <p>
+                A Fijo foi selecionada para integrar o Projeto Novo Detran, e
+                assim obtendo mais uma divisão interna, o CFC Fijo.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1997</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 9 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA DE APOIO À CRIANÇA</h3>
+              <br />
+              <p>
+                Criação da Associação das Voluntárias de Pediatria do HSL,
+                contou com 14 voluntárias para apoiar atividades relacionadas ao
+                bem estar da criança, prestando atendimento aos pais e crianças.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1998</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 10 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA DE CURSOS DE EXTENSÃO E PÓS-GRADUAÇÃO LATU SENSU</h3>
+              <br />
+              <p>
+                Criação de um ciclo de cursos de Especialização em parceria com
+                a PUCRS em áreas de interesse social, com o objetivo de ampliar
+                seus objetivos e a evolução dos conceitos sociais sobre a
+                importância e oportunidades das organizações do Terceiro Setor
+                para melhorar iniciativas sociais.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1998</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 11 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA “CANTANDO NA INFÂNCIA”</h3>
+              <br />
+              <p>
+                Criação do Coral “Cantando na infância” com a participação de 30
+                crianças em vulnerabilidade social, que além das aulas de
+                música, oferecia aulas de reforço escolar.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">1999</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 12 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>ASSOCIAÇÃO DE DISLEXIA DO RIO GRANDE DO SUL</h3>
+              <br />
+              <p>
+                Criação da Associação de Dislexia do RS com o objetivo de ajudar
+                disléxicos e seus familiares, promover o intercâmbio com as
+                Escolas e com a comunidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2001</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 13 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROJETO COMPLEMENTAÇÃO DE RENDA</h3>
+              <br />
+              <p>
+                Projeto complementação de renda foi desenvolvido com o objetivo
+                de complementar a renda familiar com a venda de peças produzidas
+                pelas mulheres integrantes do projeto. Participaram mais de 50
+                mulheres que aprenderam artesanato em tricô e crochê para
+                comercializar e complementar suas rendas.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2002</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 14 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROJETO ALFABETIZAÇÃO DE MULHERES</h3>
+              <br />
+              <p>
+                Projeto Alfabetização de Mulheres, atendeu mulheres entre 45 e
+                60 anos e o objetivo foi fazer com que elas tivessem condições
+                de ler e escrever e, também realizar cálculos simples,
+                facilitando a melhoria de vida.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2003</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 15 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROJETO RECUPERANDO O TEMPO DE APRENDER</h3>
+              <br />
+              <p>
+                Teve como objetivo desenvolver a autoconfiança e restaurar a
+                autoestima dos participantes.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2006</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 16 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROJETO O ESPORTE É O CAMINHO</h3>
+              <br />
+              <p>
+                Objetivou fortalecer laços intergrupais entre os jovens, a
+                garantia de direitos e a inclusão social através da prática de
+                uma atividade esportiva.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2008</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 17 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>OBSERVATÓRIO DO TERCEIRO SETOR</h3>
+              <br />
+              <p>
+                Teve como compromisso o desenvolvimento social do RS a fim de
+                colaborar com a qualificação da gestão das organizações do
+                Terceiro Setor, em uma perspectiva de inovação social, no âmbito
+                da produção, sistematização e disseminação do conhecimento
+                socialmente comprometido com a gestão social pública.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2009</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 18 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROJETO DESENVOLVIMENTO LOCAL</h3>
+              <br />
+              <p>
+                Com o objetivo de promover ações de integração das famílias, a
+                Fijo realizou encontros de capacitação para educadores sociais e
+                atendimento pedagógico.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2009</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 19 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>ARTICULAÇÃO DA REDE DE TECNOLOGIAS SOCIAIS</h3>
+              <br />
+              <p>
+                Formalização do ingresso da Fijo na Rede de Tecnologias Sociais
+                como articuladora de Redes tendo em vista a necessidade de
+                contribuir com o fortalecimento da Rede no RS, através dessa
+                articulação o RS é pioneiro na descentralização da RTS.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2009</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 20 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>IMPLANTAÇÃO DO ESCRITÓRIO DE PROJETOS</h3>
+              <br />
+              <p>
+                Com a finalidade de prestar serviços de captação e mobilização
+                de recursos e gerenciamento de projetos na área da educação,
+                pesquisa e extensão.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2009</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 21 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROJETO AGENTES LOCAIS DE INOVAÇÃO</h3>
+              <br />
+              <p>
+                Com o objetivo de disseminar a cultura da inovação e
+                sensibilizar o empresário para adoção de práticas de inovação, a
+                Fijo firmou contrato com o Sebrae para a prestação de
+                consultoria técnica e avaliação dos resultados dos planos de
+                ação desenvolvidos pelos Agentes Locais de Inovação.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2010</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 22 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>ESTUDO SOBRE O TERCEIRO SETOR NO RS</h3>
+              <br />
+              <p>
+                O Observatório do Terceiro Setor elaborou e publicou a pesquisa
+                “Estudo sobre o Terceiro Setor no RS”, que foi destaque como
+                “Terceiro Setor Profissionalizado”.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2011</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 23 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PROGRAMA BOLSA FUTUROS TALENTOS</h3>
+              <br />
+              <p>
+                Ao completar 30 anos a Fijo lançou o Programa Bolsa Futuros
+                talentos que visou ampliar as possibilidade de acesso à educação
+                superior oferecida pela PUCRS e para contribuir com a formação
+                de profissionais preparados para tender aos desafios impostos
+                pela realidade social e econômica do País. Este projeto
+                representou a retomada de parte das origens da Fijo, uma vez que
+                seus instituidores tinham como motivação principal a oferta de
+                Bolsas de Estudos para alunos da Universidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2011</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 24 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>ESCRITÓRIO DE CARREIRAS</h3>
+              <br />
+              <p>
+                Projeto inédito na realidade das Instituições de Ensino Superior
+                no Brasil, inspirado nos modelos europeus no propósito de
+                fortalecer o elo entre alunos e o mundo dos negócios, o
+                Escritório de Carreiras se constituiu em um espaço dedicado aos
+                alunos da PUCRS que tem por finalidade a orientação no que se
+                refere ao planejamento de carreira e a capacitação para o
+                mercado de trabalho.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2011</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 25 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>FEIRA DE CARREIRAS</h3>
+              <br />
+              <p>
+                Primeira edição de um evento inspirado nas tendências
+                internacionais de carrer services de Instituições como a OXFORD
+                University, UCLA, Warwick University que conta com a
+                participação de grandes empresas e que realiza o encontro entre
+                academia e mercado, em um espaço onde organizações podem
+                apresentar seus programas de estágio e trainee.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2012</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 26 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PRÊMIO TROFÉU MESA BRASIL</h3>
+              <br />
+              <p>
+                A Fijo através do Observatório do Terceiro Setor recebeu o
+                Troféu Mesa Brasil ofertado pelo SESC pela capacitação em Gestão
+                no Terceiro Setor.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2013</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 27 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>FORMALIZAÇÃO DE PARCERIAS</h3>
+              <br />
+              <p>
+                Reforçando o objetivo de contribuir com o desenvolvimento
+                socioambiental do RS, a Fijo torna-se parceira oficial da ABNT e
+                da FUNDAÇÃO ITAÚ SOCIAL para realizar a qualificação de
+                organizações sociais e empresas que investem em projetos sociais
+                na comunidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2013</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 28 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>CONSELHO MUNICIPAL DO IDOSO DE PORTO ALEGRE</h3>
+              <br />
+              <p>
+                Visando a qualificação dos processos de gestão das organizações
+                que atendem esse público e a efetivação de seus direitos
+                sociais, a Fijo oficializou a parceria e ofereceu assessoria
+                técnica ao COMUI e para mais 13 organizações que desenvolvem a
+                política de atendimento à pessoa idosa.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2013</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 29 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>ESCRITÓRIO DE BOLSAS ROTATIVAS</h3>
+              <br />
+              <p>
+                Criado para gerir o Programa de Bolsas Educativas da PUCRS –
+                PROED, além da analise de concessão de bolsas e emissão de novos
+                contratos, o setor é responsável pelo acompanhamento dos
+                contratos vigentes.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2016</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 30 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>ATENDIMENTO PSICOPEDAGÓGICO</h3>
+              <br />
+              <p>
+                Oferecido gratuitamente para atender a comunidade em situação de
+                vulnerabilidade social, esse serviço é realizado por
+                especialistas em psicopedagogia e estagiários em final de curso
+                de graduação. O objetivo é prestar atendimento às crianças e
+                adolescentes com dificuldades de aprendizagem, nos processos de
+                inclusão escolar e nas relações entre famílias e escolas.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2018</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 31 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>
+                CENTRO MARISTA DE PROMOÇÃO DOS DIREITOS DA CRIANÇA E DO
+                ADOLESCENTE
+              </h3>
+              <br />
+              <p>
+                Tem entre os objetivos a garantia os direitos da criança do
+                adolescente e a capacitação de profissionais e da comunidade em
+                geral para que se engajem no cuidado integral da infância.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2018</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 32 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>
+                LABGIM - LABORATÓRIO DE PESQUISAS DA COMUNICAÇÃO NAS INFÂNCIAS
+              </h3>
+              <br />
+              <p>
+                É um laboratório de pesquisa científica que tem como objetivo
+                geral promover saberes que estejam coordenados com propostas
+                efetivas de impacto social. O LabGim atua com crianças que
+                participam das Escolas e Unidades Sociais da Rede Marista, bem
+                como com crianças que fazem parte de outras Instituições
+                apoiadas pela Rede.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2019</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 33 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>LABINPI - LABORATÓRIO DE INTERVENÇÃO PRECOCE NA INFÂNCIA</h3>
+              <br />
+              <p>
+                Espera-se que o Laboratório, além de sediar o Programa de
+                Intervenção recoce na Infância, também se preste a outras
+                atividades de pesquisa, ensino e extensão vinculadas aos campos
+                da primeira infância e da inclusão, de maneira mais amplas.
+                Dentre essas atividades, por exemplo, podem ser propostos grupos
+                de estudo, cursos de extensão, pesquisas envolvendo mestrandos e
+                doutorandos do NEPAPI ou de outros grupos, entre outras.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2019</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 34 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>PUCRS CARREIRAS</h3>
+              <br />
+              <p>
+                O PUCRS Carreiras tem como propósito fortalecer o elo entre a
+                Universidade e o mundo do trabalho, desenvolvendo a
+                empregabilidade dos alunos e alumni PUCRS e comunidade. Aqui
+                você encontra estágios, vagas efetivas, capacitações e um sólido
+                trabalho de consultoria e aconselhamento de carreira.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2019</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 35 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>MULHERES E O MERCADO DE TRABALHO</h3>
+              <br />
+              <p>
+                O Grupo de preparação para o mercado de trabalho foi criado com
+                o objetivo de contribuir para que mulheres possam se apropriar
+                de seus próprios recursos e história de carreira, através do
+                trabalho em grupo e do contato com outras mulheres que servem de
+                apoio e inspiração. São abordados temas como identificação de
+                habilidades e interesses profissionais; reconhecimento da
+                trajetória de carreira, elaboração de currículo e dicas de
+                preparação para o processo seletivo. Já forma realizados três
+                edições com 30 mulheres participantes.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2020</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 36 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>SOMOS IGUAIS E ESTAMOS JUNTOS</h3>
+              <br />
+              <p>
+                A Campanha "Somos iguais e estamos juntos" foi criada devido a
+                pandemia do Covid-19 em 2020. A partir dos impactos e desafios
+                que a população em situação de vulnerabilidade social tem
+                enfrentado, entendemos que deveríamos pensar no próximo e no bem
+                comum de cada família. A doação teve o intuito de arrecadar
+                fundos para a aquisição de cestas básicas e materiais de
+                higiene. Foram contempladas as Instituições: Centro Social Padre
+                Pedro Leonardi (Restinga/POA), Paróquia Nossa Senhora da Boa
+                Viagem (Ilha da Pintada/POA) e Centro Social Aparecida das Águas
+                (Ilha dos Marinheiros/POA).
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2020</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <!-- SLIDE 37 -->
+        <div class="slide">
+          <div class="content">
+            <div class="text">
+              <h3>LABORATÓRIO DAS INFÂNCIAS</h3>
+              <br />
+              <p>
+                É uma estrutura de pesquisa, ensino e extensão idealizado para
+                promover saberes e fazeres coordenados com propostas efetivas e
+                interdisciplinares de impacto social na infância.
+              </p>
+            </div>
+          </div>
+
+          <div class="line-area">
+            <div class="year">2021</div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="arrows-wrapper">
+        <button class="arrow prev">&#10094;</button>
+
+        <div class="mobile-year-box"></div>
+
+        <button class="arrow next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <div class="footer-content">
+    
+    <div class="footer-brand">
+      <img src="../img/logo-branca.png" alt="Logo FIJO" class="footer-logo-img" />
+      <div class="footer-social">
+        <a href="https://www.facebook.com/fundacaoirmaojoseotao/?locale=pt_BR" target="_blank" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/fundacaofijo/" target="_blank" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Institucional</h3>
+      <ul class="footer-links">
+        <li>
+          <a href="https://maps.app.goo.gl/2BzVPABnQnim523c7" target="_blank">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>
+              Ipiranga, 6681 - Prédio 2<br>
+              Campus PUCRS<br>
+              Porto Alegre/RS - 90619-900
+            </span>
+          </a>
+        </li>
+        <li class="cnpj-text">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>CNPJ: 88.483.276/0001-19</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contatos</h3>
+      <ul class="footer-links">
+        <li>
+          <a href="../html/contato.html">
+            <i class="bi bi-chat-dots-fill"></i> Fale conosco
+          </a>
+        </li>
+        <li>
+          <a href="mailto:fundacao@pucrs.br">
+            <i class="bi bi-envelope-fill"></i> fundacao@pucrs.br
+          </a>
+        </li>
+        <li>
+          <a href="tel:+555133534130">
+            <i class="bi bi-telephone-fill"></i> (51) 3353-4130
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fundação Irmão José Otão - FIJO. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+  <script src="../js/linha_tempo.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+
+</html>
