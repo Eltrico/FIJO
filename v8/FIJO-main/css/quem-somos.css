@@ -1,0 +1,242 @@
+/* ========================= RESET E VARIÁVEIS ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+i.bi {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+:root {
+  --azul-principal: #0d47a1;
+  --laranja-destaque: #ff9800;
+  --branco: #ffffff;
+  --cinza-claro: #f5f5f5;
+}
+
+
+/* ========================= HERO ========================= */
+.quem-somos-hero {
+  background: linear-gradient(90deg, #f5f5f5, #e0e0e0);
+  text-align: center;
+  padding: 100px 20px 60px 20px;
+}
+
+.quem-somos-hero h1 {
+  font-size: 48px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.quem-somos-hero p {
+  font-size: 20px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ========================= SOBRE A FIJO ========================= */
+.sobre-fijo {
+  background: #f0f4f8;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sobre-fijo h2 {
+  font-size: 36px;
+  color: #0d47a1;
+  margin-bottom: 50px;
+}
+
+.sobre-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sobre-card {
+  background: var(--branco);
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 300px;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.sobre-card i {
+  font-size: 36px;
+  color: #ff9800;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.sobre-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ========================= MISSÃO, VISÃO E VALORES ========================= */
+.missao-visao-valores {
+  background: var(--branco);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.missao-visao-valores h2 {
+  font-size: 36px;
+  color: #0d47a1;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  border-radius: 12px;
+  width: 280px;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.card i {
+  font-size: 40px;
+  color: #ff9800;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #0d47a1;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Classe que adiciona animação ao aparecer */
+.card.animate, .sobre-card.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========================= RESPONSIVO ========================= */
+@media (max-width: 1024px) {
+  .cards-container, .sobre-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container, .sobre-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-card, .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .quem-somos-hero h1 {
+    font-size: 36px;
+  }
+
+  .quem-somos-hero p {
+    font-size: 18px;
+  }
+}
+
+
+.sociais {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.language-switch button {
+  background-color: #F78F1E;
+  border: 1px solid #0056A0;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.language-switch button:hover {
+  background-color: #0056A0;
+  color: #F78F1E;
+}
+
+@media (max-width: 768px) {
+  .sociais {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+
+
+.language-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.language-switch button {
+  background: linear-gradient(135deg, #F78F1E, #ffb655);
+  border: none;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: all 0.25s ease;
+}
+
+.language-switch button:hover {
+  background: linear-gradient(135deg, #0056a0, #0d47a1);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+}
+
+.language-switch button:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}

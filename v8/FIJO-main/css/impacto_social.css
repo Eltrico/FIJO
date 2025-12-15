@@ -1,0 +1,169 @@
+/* ============================
+   RESET GERAL
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+i.bi {
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.fijo-impact-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 por linha */
+  gap: 35px;
+  max-width: 1200px; /* Não deixa colar nas laterais */
+  margin: 0 auto; /* centraliza */
+  padding: 0 40px; /* espaço lateral */
+}
+
+.impact-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform .3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Ícone */
+.icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Título e texto */
+.impact-card h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.impact-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5em;
+}
+
+/* Bordinhas superiores coloridas */
+.impact-card.azul::before,
+.impact-card.laranja::before,
+.impact-card.preto::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  border-radius: 0 0 6px 6px;
+  top: 0;
+  left: 20px;
+}
+
+.impact-card.azul::before { background: #0057A3; }
+.impact-card.laranja::before { background: #FF7F32; }
+.impact-card.preto::before { background: #000000; }
+
+@media (max-width: 900px) {
+  .fijo-impact-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .fijo-impact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================
+   SEÇÃO PARCERIA FIJO + IOS
+=============================== */
+
+.ios-parceria-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #6500ad;
+  border-radius: 20px;
+}
+
+.ios-texto {
+  flex: 1;
+  text-align: justify;
+}
+
+.ios-texto h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.ios-texto p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.6;
+}
+
+.ios-imagem img {
+  width: 260px;         /* ajuste como quiser */
+  max-width: 100%;
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+  .ios-parceria-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .ios-texto {
+    max-width: 90%;
+  }
+
+  .ios-imagem img {
+    width: 200px;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: #003366; /* azul institucional mais forte */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Linha decorativa abaixo do h1 */
+h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #0057A3; /* azul igual ao card */
+  display: block;
+  margin: 12px auto 0 auto;
+  border-radius: 4px;
+}
